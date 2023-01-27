@@ -1,0 +1,130 @@
+.footer{
+	background-color: #7854F7;
+	cursor: default;
+	&__inner{
+		padding: 45px 0 64px 0;
+		max-width: 1480px;
+		margin: 0 auto;
+	}
+	&__advantage{
+		max-width: 1224px;
+		margin: 0 auto;
+		margin-bottom: 140px;
+	}
+	&__list{
+		margin: 0 -10 / 1244 * 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item{
+		@include fontText(Roboto, 20px, 400);
+		line-height: 110%;
+		color: white;
+		display: flex;
+		align-items: center;
+		width: 394.666667 / 1244 * 100%;
+		margin: 10 / 1244 * 100%;
+		@media (max-width: 960px) {
+			width: 435 / 910 * 100%;
+			margin: 10 / 910 * 100%;
+		}
+		@media (max-width: 650px) {
+			width: 580 / 600 * 100%;
+			margin: 10 / 600 * 100%;
+			justify-content: center;
+		}
+		&::before{
+			font-size: 41px;
+			margin-right: 15px;
+		}
+	}
+	&__logo{
+		text-align: center;
+		padding-bottom: 56px;
+		border-bottom: 1px solid #9A7DFF;
+		margin-bottom: 34px; 
+		&  a{
+			color: white;
+			font-size: 37px;
+		}
+	}
+	&__columns{
+		display: grid;
+		grid-template-columns: repeat( auto-fit, minmax(140px, 1fr) );
+		gap:10px;
+		max-width: 1090px;
+		margin: 0 auto;
+		@media (max-width: 360px) {
+			text-align: center;
+		}
+	}
+	&__column{
+		&-title{
+			@include fontText(Roboto, 14px, 700);
+			line-height: 52 / 14 * 100%;
+			color: white;
+			text-transform: uppercase;
+		}
+		&-link{
+			@include fontText(Roboto, 12px, 400);
+			line-height: 22 / 12 * 100%;
+			color: white;
+			@media (min-width: $md2 + px) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+.footer-bottom{
+	cursor: default;
+	&__inner{
+		padding: 25px 0;
+		max-width: 1480px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		@media (max-width: 960px) {
+			flex-direction: column;
+		}
+	}
+	&__list{
+		display: flex;
+	}
+	&__item:not(:last-child){
+		margin-right: 54px;
+	}
+	&__link{
+		color: #272D4E;
+		font-size: 20px;
+		transition: color 0.3s ease 0s;
+		@media (min-width: $md2 + px) {
+			&:hover {
+				color: #F53838;
+			}
+		}
+	}
+	&__copyright{
+		max-width: 420px;
+		text-transform: uppercase;
+		@include fontText(Roboto, 12px, 400);
+		line-height: 22 / 12 * 100%;
+		color: #272D4E;
+		text-align: center;
+		&-link{
+			color: #272D4E;
+			text-decoration: underline;
+			white-space: nowrap;
+		}
+		&-img{
+			width: 183px;
+			height: 14px;
+		}
+		@media (max-width: 960px) {
+			margin: 20px 0;
+		}
+	}
+}

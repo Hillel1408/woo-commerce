@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'icon';
+  src:  url('../fonts/icon.eot?diymkq');
+  src:  url('../fonts/icon.eot?diymkq#iefix') format('embedded-opentype'),
+    url('../fonts/icon.ttf?diymkq') format('truetype'),
+    url('../fonts/icon.woff?diymkq') format('woff'),
+    url('../fonts/icon.svg?diymkq#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_"]::before, [class*=" _"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._8:before {
+  content: "\e901";
+}
+._9:before {
+  content: "\e902";
+}
+._10:before {
+  content: "\e903";
+}
+._4:before {
+  content: "\e904";
+}
+._5:before {
+  content: "\e905";
+}
+._6:before {
+  content: "\e906";
+}
+._7:before {
+  content: "\e907";
+}
+._2:before {
+  content: "\e900";
+}
+._3:before {
+  content: "\e908";
+}

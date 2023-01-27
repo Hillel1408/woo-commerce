@@ -1,0 +1,32 @@
+.business{
+	background-color: #5F37EF;
+	cursor: default;
+	&__inner{
+		padding: 78px 0;
+		display: flex;
+		max-width: 1130px;
+		margin: 0 auto;
+		align-items: center;
+		@media (max-width: 870px) {
+			flex-direction: column;
+		}
+	}
+	&__text{
+		color: white;
+		margin-right: 67px;
+		font-weight: 400;
+		@media (max-width: 870px) {
+			margin-right: 0;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+	}
+	&__btn{
+		flex: 0 0 auto;
+		& button{
+			border: 2px solid #FFFFFF;
+			padding: 25px 46px;
+			border-radius: 60px;
+		}
+	}
+}

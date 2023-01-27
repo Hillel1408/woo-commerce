@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import "mixins";
+@import "fonts";
+@import "icons";
+
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1810;
+$md1: $maxWidthContainer + 70;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 575.98;
+
+$fontFamily: "Roboto";
+
+@import "null";
+
+.body{
+	&::-webkit-scrollbar{
+		width: 10px;
+		background-color: #f9f9fd;	
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: #F53838;
+		border-radius: 30px;
+	}
+}
+
+body.lock{
+	overflow: hidden !important;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: none;
+		padding: 0 35px;
+	}
+}
+.btn{
+	@include fontText(Roboto, 18px, 500);
+	line-height: 21 / 18 * 100%;
+	color: #FFFFFF;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: background-color 0.3s ease 0s;
+	background-color: transparent;
+	@media (min-width: $md2 + px) {
+		&:hover {
+			background-color: #F53838;
+		}
+	}
+}
+.main-title{
+	font-family: CircularStd;
+	font-weight: 700;
+	@include adaptiv-font(85, 38, 1);
+	line-height: 95 / 85 * 100%;
+	color: #272D4E;
+}
+.text{
+	@include fontText(Roboto, 18px, 400);
+	line-height: 25 / 18 * 100%;
+	color: #94A2B3;
+}
+.title{
+	font-family: CircularStd;
+	font-weight: 700;
+	@include adaptiv-font(55, 28, 1);
+	line-height: 70 / 55 * 100%;
+	color: #272D4E;
+}
+.subtitle{
+	font-family: CircularStd;
+	font-weight: 700;
+	@include adaptiv-font(36, 24, 1);
+	line-height: 50 / 36 * 100%;
+	color: #272D4E;
+}
+.inp{
+	display: block;
+	border: 1px solid #c9c9c9;
+	width: 100%;
+	border-radius: 5px;
+	height: 50px;
+	padding: 0 20px;
+	margin-bottom: 20px;
+	@include fontText(Lato, 16px, 400);
+	line-height: 22 / 16 * 100%;
+	color: black;
+}
+.lb{
+	display: block;
+	margin-bottom: 10px;
+	font-size: 16px;
+	&_color{
+		color: #527d80;
+	}
+}
+
+@import "./sections/header";
+@import "./sections/intro";
+@import "./sections/ecommerce";
+@import "./sections/woocommerce";
+@import "./sections/reviews";
+@import "./sections/people";
+@import "./sections/business";
+@import "./sections/footer";
+@import "./sections/modal";
